@@ -68,3 +68,36 @@
 .reference-layout .reference-hero h1,.reference-layout .contact-hero h1{animation:none}
 .heading-reveal{opacity:1;transform:none;transition:none}
 }
+
+/* Mail enquiry form — restrained, spacious layout matching the reference. */
+.reference-layout .contact-form-section{max-width:1000px;padding-top:65px;padding-bottom:65px}
+.form-introduction{text-align:center;padding-bottom:48px;border-bottom:1px solid #ddd;margin-bottom:48px}
+.form-introduction h2{font-size:36px;margin-bottom:28px}
+.form-introduction p{font-size:14px;color:#444;margin-top:12px}
+.enquiry-form{font-size:14px;color:#333}
+.enquiry-form label{display:block;margin-bottom:4px;line-height:1.5}
+.enquiry-form label span{color:#777}
+.name-fields{border:0;padding:0;margin:0 0 22px;display:grid;grid-template-columns:1fr 1fr;gap:12px;min-width:0}
+.name-fields legend{padding:0;margin-bottom:3px}
+.enquiry-form input:not([type=hidden]),.enquiry-form textarea{display:block;width:100%;max-width:100%;border:1px solid #a8a8a8;border-radius:0;background:#fafafa;padding:11px 12px;font:inherit;color:#222;box-shadow:none;appearance:none}
+.enquiry-form input:focus,.enquiry-form textarea:focus{outline:2px solid #555;outline-offset:2px;background:#fff}
+.enquiry-form textarea{min-height:140px;resize:vertical}
+.form-field{margin-bottom:23px}
+.form-field small{display:block;margin-top:6px;color:#777;font-size:11px}
+.enquiry-form input::placeholder,.enquiry-form textarea::placeholder{color:#8a8a8a;font-size:12px}
+.form-honey{display:none!important}
+.form-bottom{display:flex;gap:28px;align-items:flex-start;justify-content:space-between}
+.form-note{font-size:10px;line-height:1.7;color:#777;max-width:500px}
+.form-note a{text-decoration:underline}
+.form-submit{border:1px solid #222;background:#222;color:white;letter-spacing:.16em;min-width:145px;padding:16px 26px;cursor:pointer}
+.form-submit:hover{background:#444}
+.form-submit:disabled{opacity:.65;cursor:wait}
+.contact-alternatives{margin-top:45px;padding-top:26px;border-top:1px solid #ddd;text-align:center;font-size:12px}
+.contact-alternatives p{color:#777;margin-bottom:13px}
+.contact-alternatives>a{display:inline-block;margin:4px 14px;border-bottom:1px solid #aaa}
+.form-confirmation{padding:35px 25px;background:#f5f5f3;text-align:center}
+.form-confirmation[hidden],.enquiry-form[hidden]{display:none}
+.form-confirmation h3{font-size:27px;font-weight:400;margin-bottom:14px}
+.form-confirmation p{font-size:14px;color:#555}
+.form-confirmation .button{border:1px solid #222;margin-top:22px;font-size:10px;letter-spacing:.12em}
+@media(max-width:600px){.name-fields{grid-template-columns:1fr;gap:18px}.form-bottom{flex-direction:column-reverse;align-items:stretch;gap:18px}.form-submit{width:100%}.reference-layout .contact-form-section{padding:45px 25px}.form-introduction{padding-bottom:30px;margin-bottom:32px}.form-introduction h2{font-size:31px}.enquiry-form input:not([type=hidden]),.enquiry-form textarea{font-size:16px}}
