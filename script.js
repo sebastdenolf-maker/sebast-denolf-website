@@ -26,3 +26,22 @@ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-mot
     headings.observe(heading);
   });
 }
+
+const enquiryForm = document.getElementById('enquiry-form');
+const enquiryConfirmation = document.getElementById('contact-confirmation');
+if (enquiryForm && enquiryConfirmation) {
+  if (new URLSearchParams(window.location.search).get('sent') === '1') {
+    enquiryForm.hidden = true;
+    enquiryConfirmation.hidden = false;
+  }
+  enquiryForm.addEventListener('submit', () => {
+    const button = enquiryForm.querySelector('button[type="submit"]');
+    button.disabled = true;
+    button.textContent = 'SENDING…';
+  });
+  window.addEventListener('pageshow', () => {
+    const button = enquiryForm.querySelector('button[type="submit"]');
+    button.disabled = false;
+    button.textContent = 'SUBMIT';
+  });
+}
